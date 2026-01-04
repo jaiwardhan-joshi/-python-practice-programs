@@ -4,15 +4,16 @@ import random
 def guess_game() :
     
      genNumber = random.randint(0,100)
-     print("Enter a number between 0-100")
+     base_number = random.randint(2,16)
+     print(f"Guess the number (0 to 100 in decimal), but enter it in base {base_number}")
      i = 3
      while True :
         try :
-            userNumber = int(input("Enter your number :"))
+            userNumber = int(input(f"Enter your number in {base_number} :"), base_number)
             i = i - 1
             if userNumber > genNumber :
                 print("Number is too high")
-                #improvment -2 removed continue statement (uncesscary)
+              #improvment -2 removed continue statement (uncesscary)
 
             elif userNumber < genNumber :
                 print("Number is too low")
@@ -29,7 +30,7 @@ def guess_game() :
             print(f"{i} chances left")
 
         except ValueError :
-            print("only enter the integers")
+            print("Invalid number for this base")
 
 
             
