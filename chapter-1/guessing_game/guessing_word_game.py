@@ -16,24 +16,21 @@ while i < len(words):
 f.close() 
 
 random_pick = random.randint(0, len(short_words) -1 )
+i = 0
 def guessing_game() :
     while True:
-        user_input = (input("Enter your word! word limit : 2 - 4!")).lower()
-        if user_input == short_words[random_pick].lower() :
-            print("You got that right!")
-            break
-        
-        elif user_input < short_words[random_pick].lower() :
-            print("You choice comes ealier than target word alphabetically!")
-        
-        elif user_input > short_words[random_pick].lower() : 
-            print("Your choice cames later than targer word alphabetically!")
+            user_input = (input("Enter your word! word limit : 2 - 4!")).lower()
+            if user_input == short_words[random_pick].lower() :
+                print("You got that right!")
+                break
+            
+            elif user_input < short_words[random_pick].lower() :
+                print("You choice comes ealier than target word alphabetically!")
+            
+            elif user_input > short_words[random_pick].lower() : 
+                print("Your choice cames later than targer word alphabetically!")
 
-        if len(user_input) < 2 and len(user_input) > 5 :
-            print("You're range of input is out of order! please select a word under the range of 2-4!")
         
-
-
 
 guessing_game()
 
