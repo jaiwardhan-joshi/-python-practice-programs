@@ -1,6 +1,8 @@
-def wrapper_sum(func, *a) :
-    print("Before", a)
-    result = func(*a)
-    print("After", result)
+def my_sum(*x) :
+    sum = 0
+    for i in x :
+        sum = sum + i 
+    print(sum)
 
-wrapper_sum(sum , 1,2,3,4,5)
+my_sum(1,2,3,3,4,6)
+         
