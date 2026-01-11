@@ -5,4 +5,3 @@ def my_sum(*x) :
     print(sum)
 
 my_sum(1,2,3,3,4,6)
-         
